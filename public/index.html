@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>MPU Dashboard — Live 3D + Charts</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />
+  <!-- Socket.IO client -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Three.js (module-free CDN) -->
+  <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header><h1>MPU6050 Live Dashboard</h1></header>
+  <main>
+    <section class="left">
+      <div class="panel">
+        <h2>MPU1 (0x68)</h2>
+        <div class="readouts" id="readout1">
+          <div>Yaw: <span id="m1yaw">—</span>°</div>
+          <div>Pitch: <span id="m1pitch">—</span>°</div>
+          <div>Roll: <span id="m1roll">—</span>°</div>
+        </div>
+        <canvas id="chart1" height="200"></canvas>
+      </div>
+
+      <div class="panel">
+        <h2>MPU2 (0x69)</h2>
+        <div class="readouts" id="readout2">
+          <div>Yaw: <span id="m2yaw">—</span>°</div>
+          <div>Pitch: <span id="m2pitch">—</span>°</div>
+          <div>Roll: <span id="m2roll">—</span>°</div>
+        </div>
+        <canvas id="chart2" height="200"></canvas>
+      </div>
+    </section>
+
+    <section class="right">
+      <div id="threeWrap">
+        <div id="label">3D View (MPU1 left, MPU2 right)</div>
+        <div id="threeCanvas"></div>
+      </div>
+      <div id="log">Waiting for data…</div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

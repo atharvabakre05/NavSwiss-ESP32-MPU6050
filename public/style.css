@@ -1,0 +1,13 @@
+*{box-sizing:border-box}
+body{font-family:system-ui,Segoe UI,Arial; margin:0; background:#f3f4f6; color:#111}
+header{background:#0b74da;color:white;padding:12px 20px}
+header h1{margin:0;font-size:18px}
+main{display:flex;gap:16px;padding:16px}
+.left{width:48%; display:flex;flex-direction:column;gap:16px}
+.panel{background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.readouts div{font-size:16px;margin:6px 0}
+.right{flex:1;display:flex;flex-direction:column;gap:12px}
+#threeWrap{background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 6px rgba(0,0,0,.06);height:540px;display:flex;flex-direction:column}
+#threeCanvas{flex:1}
+#label{font-size:14px;margin-bottom:10px;color:#333}
+#log{background:#fff;padding:10px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.06)}
